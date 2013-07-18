@@ -1,0 +1,79 @@
+bootstrap_collection:
+    add:          Ajouter
+    delete:       Supprimer
+    confirm:
+        delete:           Êtes-vous sûr de vouloir supprimer cet élément?
+        batchDelete:      Êtes-vous sûr de vouloir supprimer tous les éléments sélectionnés?
+
+collection_upload:
+    file.add:     Ajouter un fichier...
+    error:        Erreur
+    cancel:       Annuler
+    delete:       Supprimer
+    download:     Téléchargement
+    confirm:
+        batchDelete:      Êtes-vous sûr de vouloir supprimer tous les éléments sélectionnés?
+    errors:
+        maxNumFiles:      Nombre maximum de fichiers dépassé
+        typeNotAllowed:   Type de fichier non autorisé
+        maxFileSize:      La taille du fichier est trop importante
+        minFileSize:      La taille du fichier est trop faible
+        
+date_range:
+    label:
+        apply:          Valider
+        clear:          Effacer
+        from:           De
+        to:             A
+        week:           S
+        custom_range:   Tranche personnalisée
+    days:
+        sunday:         Di
+        monday:         Lu
+        tuesday:        Ma
+        wednesday:      Me
+        thursday:       Je
+        friday:         Ve
+        saturday:       Sa
+    months:
+        january:        Janvier
+        february:       Février
+        march:          Mars
+        april:          Avril
+        may:            Mai
+        june:           Juin
+        july:           Juillet
+        august:         Août
+        september:      Septembre
+        october:        Octobre
+        november:       Novembre
+        december:       Décembre
+    ranges:
+        today:          Aujourd'hui
+        yesterday:      Hier
+        last-week:      Semaine dernière
+        last-month:     Mois dernier
+        last-year:      Année dernière
+        
+double_list:
+    selected:           Sélectionné
+    unselected:         Désélectionné
+        
+single_upload:
+    button:
+        add:              Télécharger fichier
+        replace:          Remplacer fichier
+        cancel:           Annuler
+        delete:           Supprimer
+    type:
+        audio:            Audio
+        archive:          Archive
+        html:             HTML
+        image:            Image
+        pdf-document:     Document<br />PDF
+        plain-text:       Texte<br />plein
+        presentation:     Presentation
+        spreadsheet:      Tableur
+        text-document:    Document<br />Texte
+        unknown:          Type de fichier<br />inconnu
+        video:            Vidéo
