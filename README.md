@@ -44,8 +44,6 @@ template, and include static and dynamic stylesheets and javascripts.
 
 ```html+django
 {% block stylesheets %}
-    {{ parent() }}
-
     {% include 'AvocodeFormExtensionsBundle::stylesheets.html.twig' %}
     {% if form is defined %}
         {{ form_stylesheet(form) }}
@@ -53,8 +51,6 @@ template, and include static and dynamic stylesheets and javascripts.
 {% endblock %}
 
 {% block javascripts %}
-    {{ parent() }}
-
     {% include 'AvocodeFormExtensionsBundle::javascripts.html.twig' %}
     {% if form is defined %}
         {{ form_javascript(form) }}
