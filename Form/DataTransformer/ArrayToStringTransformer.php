@@ -39,7 +39,7 @@ class ArrayToStringTransformer implements DataTransformerInterface
      */
     public function transform($array)
     {
-        if (null === $array || !is_array($array)) {
+        if (null === $array || !is_array($array) || null === $array['from'] || null === $array['to']) {
             return '';
         }
 
@@ -51,7 +51,7 @@ class ArrayToStringTransformer implements DataTransformerInterface
      */
     public function reverseTransform($string)
     {
-        if (is_array($string)) {
+        if (is_array($string) || (0 === strlen($string))) {
             return $string;
         }
 
