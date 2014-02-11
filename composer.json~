@@ -1,5 +1,5 @@
 {
-    "name": "raffaello/form-extensions-bundle",
+    "name": "avocode/form-extensions-bundle",
     "type": "symfony-bundle",
     "description": "Add additional form types to symfony2",
     "license": "MIT and Apache-2.0",
