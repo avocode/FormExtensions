@@ -29,6 +29,7 @@ class CollectionUploadType extends AbstractType
      */
     public function setFileStorage(FileStorageInterface $storage)
     {
+
         $this->storage = $storage;
     }
 
