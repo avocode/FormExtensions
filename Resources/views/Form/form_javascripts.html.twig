@@ -3,9 +3,18 @@
     {% for child in form %}
         {{ afe_form_javascript(child) }}
     {% endfor %}
-    {% block form_afe_javascript_prototype %}{% endblock form_afe_javascript_prototype %}
 {% endspaceless %}
 {% endblock form_afe_javascript %}
+
+{% block form_afe_javascript_prototype %}
+{% spaceless %}
+    {% for child in form %}
+        parent.push('{{ child.vars.name }}');
+        $field = $('#' + id + '_' + parent.join('_'));
+        {{ afe_form_javascript(child, true) }}
+        parent.pop();                                                                                                                                            {% endfor %}
+{% endspaceless %}
+{% endblock form_afe_javascript_prototype %}
 
 {% block field_afe_javascript "" %}
 
@@ -26,11 +35,14 @@
             confirm_batch:  {{ 'afe_bootstrap_collection.confirm.batchDelete'|trans({}, 'AvocodeFormExtensions')|e4js }}
         },
         javascript: function(id) {
+        parent = [];
         {% if prototype is defined %}
             {% if prototype.vars.compound %}
                 {% for child in prototype %}
-                    $field = $('#' + id + '_{{ child.vars.name }}');
+                    parent.push('{{ child.vars.name }}');
+                    $field = $('#' + id + '_' + parent.join('_'));
                     {{ afe_form_javascript(child, true) }}
+                    parent.pop();
                 {% endfor %}
             {% else %}
                 $field = $('#' + id);
