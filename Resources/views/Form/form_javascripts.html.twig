@@ -342,7 +342,7 @@
         var $field = $('#{{ id }}');
 
     {% block afe_single_upload_afe_javascript_prototype %}
-        $('#{{ id }}').singleUpload({
+        $field.singleUpload({
             minWidth:         {{ minWidth|e4js }},
             minHeight:        {{ minHeight|e4js }},
             maxWidth:         {{ maxWidth|e4js }},
