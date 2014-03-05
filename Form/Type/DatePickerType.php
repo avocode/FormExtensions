@@ -81,6 +81,7 @@ class DatePickerType extends AbstractType
                                      : $options['todayButton'],
                 'todayHighlight'  => $options['todayHighlight'],
                 'clearButton'     => $options['clearButton'],
+                'changeDateEvent' => $options['changeDateEvent'],
                 'language'        => !$options['language']
                                      ? $this->getLocale()
                                      : $options['language'],
@@ -105,6 +106,7 @@ class DatePickerType extends AbstractType
             'todayButton'     => false,
             'todayHighlight'  => false,
             'clearButton'     => false,
+            'changeDateEvent' => false,
             'language'        => false,
             'attr'            => array(
                 'class' => 'input-small'
@@ -119,6 +121,7 @@ class DatePickerType extends AbstractType
             'autoclose'       => array('bool'),
             'todayHighlight'  => array('bool'),
             'clearButton'     => array('bool'),
+            'changeDateEvent' => array('bool', 'string'),
         ));
 
         $resolver->setAllowedValues(array(
