@@ -34,30 +34,51 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
+        new Admingenerator\FormBundle\AdmingeneratorFormBundle(),
         new Avocode\FormExtensionsBundle\AvocodeFormExtensionsBundle(),
+        // AdmingeneratorGeneratorBundle is optional, however if you're useing it
+        // make sure it is loaded AFTER AvocodeFormExtensionsBundle
+        new Admingenerator\GeneratorBundle\AdmingeneratorGeneratorBundle(),
     );
 }
+?>
 ```
-
-You have to register AvocodeFormExtensionsBundle() before a potential registering of AdmingeneratorGeneratorBundle().
 
 To make `avocode/form-extensions-bundle` forms work, you need to edit your base 
 template, and include static and dynamic stylesheets and javascripts. 
 
+For Admingenerator users:
+
 ```html+django
+{% extends 'AdmingeneratorGeneratorBundle::base_admin.html.twig' %}
+
 {% block stylesheets %}
-    {{ parent() }}   {# remove this line if you're not extending another template #}
+    {{ parent() }}
 
     {% include 'AvocodeFormExtensionsBundle::stylesheets.html.twig' %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    {% include 'AvocodeFormExtensionsBundle::javascripts.html.twig' %}
+{% endblock %}
+```
+
+For others:
+
+```html+django
+{% block stylesheets %}
+    {% include 'AvocodeFormExtensionsBundle::stylesheets.html.twig' %}
+    
     {% if form is defined %}
         {{ form_css(form) }}
     {% endif %}
 {% endblock %}
 
 {% block javascripts %}
-    {{ parent() }}   {# remove this line if you're not extending another template #}
-
     {% include 'AvocodeFormExtensionsBundle::javascripts.html.twig' %}
+    
     {% if form is defined %}
         {{ form_js(form) }}
     {% endif %}

@@ -74,12 +74,7 @@
             <tag name="form.type_extension" alias="form" />
         </service>
         
-        <!-- Twig extensions -->
-        <service id="avocode.twig.extension.form" class="Avocode\FormExtensionsBundle\Twig\Extension\FormExtension">
-            <tag name="twig.extension" />
-            <argument type="service" id="twig.form.renderer" />
-        </service>
-        
+        <!-- Twig extensions -->        
         <service id="avocode.twig.extension.image_assets" class="Avocode\FormExtensionsBundle\Twig\Extension\ImageAssetsExtension">
             <tag name="twig.extension" />
             <argument type="service" id="service_container" />
