@@ -1,7 +1,7 @@
 FormExtensions
 ==============
 
-[![knpbundles.com](http://knpbundles.com/loostro/FormExtensions/badge)](http://knpbundles.com/loostro/FormExtensions)
+[![knpbundles.com](http://knpbundles.com/symfony2admingenerator/FormExtensions/badge)](http://knpbundles.com/symfony2admingenerator/FormExtensions)
 [![Latest Stable Version](https://poser.pugx.org/avocode/form-extensions-bundle/v/stable.png)](https://packagist.org/packages/avocode/form-extensions-bundle)
 [![Total Downloads](https://poser.pugx.org/avocode/form-extensions-bundle/downloads.png)](https://packagist.org/packages/avocode/form-extensions-bundle)
 
@@ -50,7 +50,7 @@ template, and include static and dynamic stylesheets and javascripts.
 
     {% include 'AvocodeFormExtensionsBundle::stylesheets.html.twig' %}
     {% if form is defined %}
-        {{ afe_form_stylesheet(form) }}
+        {{ form_css(form) }}
     {% endif %}
 {% endblock %}
 
@@ -59,7 +59,7 @@ template, and include static and dynamic stylesheets and javascripts.
 
     {% include 'AvocodeFormExtensionsBundle::javascripts.html.twig' %}
     {% if form is defined %}
-        {{ afe_form_javascript(form) }}
+        {{ form_js(form) }}
     {% endif %}
 {% endblock %}
 ```
