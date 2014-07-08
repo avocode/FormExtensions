@@ -1,17 +1,17 @@
-{% block form_afe_javascript %}
+{% block form_js %}
 {% spaceless %}
     {% for child in form %}
-        {{ afe_form_javascript(child) }}
+        {{ form_js(child) }}
     {% endfor %}
-    {% block form_afe_javascript_prototype %}{% endblock form_afe_javascript_prototype %}
+    {% block form_js_prototype %}{% endblock form_js_prototype %}
 {% endspaceless %}
-{% endblock form_afe_javascript %}
+{% endblock form_js %}
 
-{% block field_afe_javascript "" %}
+{% block field_js "" %}
 
-{% block button_afe_javascript "" %}
+{% block button_js "" %}
 
-{% block afe_bootstrap_collection_afe_javascript_prototype %}
+{% block afe_bootstrap_collection_js_prototype %}
 {% spaceless %}
 {% autoescape false %}
     $field.bootstrapCollection({
@@ -30,63 +30,63 @@
             {% if prototype.vars.compound %}
                 {% for child in prototype %}
                     $field = $('#' + id + '_{{ child.vars.name }}');
-                    {{ afe_form_javascript(child, true) }}
+                    {{ form_js(child, true) }}
                 {% endfor %}
             {% else %}
                 $field = $('#' + id);
-                {{ afe_form_javascript(prototype, true) }}
+                {{ form_js(prototype, true) }}
             {% endif %}
         {% endif %}
         }
     });
 {% endautoescape %}
 {% endspaceless %}
-{% endblock afe_bootstrap_collection_afe_javascript_prototype %}
+{% endblock afe_bootstrap_collection_js_prototype %}
 
-{% block afe_collection_fieldset_afe_javascript %}
+{% block afe_collection_fieldset_js %}
 {% spaceless %}
 <script type="text/javascript">
     jQuery(document).ready(function($) {
         var $field = $('#{{ id }}');
 
-    {% block afe_collection_fieldset_afe_javascript_prototype %}
-        {{ block('afe_bootstrap_collection_afe_javascript_prototype') }}
-    {% endblock afe_collection_fieldset_afe_javascript_prototype %}
+    {% block afe_collection_fieldset_js_prototype %}
+        {{ block('afe_bootstrap_collection_js_prototype') }}
+    {% endblock afe_collection_fieldset_js_prototype %}
     });
 </script>
 
 {% for child in form %}
-    {{ afe_form_javascript(child) }}
+    {{ form_js(child) }}
 {% endfor %}
 {% endspaceless %}
-{% endblock afe_collection_fieldset_afe_javascript %}
+{% endblock afe_collection_fieldset_js %}
 
-{% block afe_collection_table_afe_javascript %}
+{% block afe_collection_table_js %}
 {% spaceless %}
 <script type="text/javascript">
     jQuery(document).ready(function($) {
         var $field = $('#{{ id }}');
 
-    {% block afe_collection_table_afe_javascript_prototype %}
-        {{ block('afe_bootstrap_collection_afe_javascript_prototype') }}
-    {% endblock afe_collection_table_afe_javascript_prototype %}
+    {% block afe_collection_table_js_prototype %}
+        {{ block('afe_bootstrap_collection_js_prototype') }}
+    {% endblock afe_collection_table_js_prototype %}
     });
 </script>
 
 {% for child in form %}
-    {{ afe_form_javascript(child) }}
+    {{ form_js(child) }}
 {% endfor %}
 {% endspaceless %}
-{% endblock afe_collection_table_afe_javascript %}
+{% endblock afe_collection_table_js %}
 
-{% block afe_collection_upload_afe_javascript %}
+{% block afe_collection_upload_js %}
 {% spaceless %}
 {% autoescape false %}
 <script type="text/javascript">
     $(document).ready(function(){
         var $field = $('#{{ id }}');
 
-    {% block afe_collection_upload_afe_javascript_prototype %}
+    {% block afe_collection_upload_js_prototype %}
         $field.uploadCollection({
             autoUpload:               {{ autoUpload|e4js }},
             urlUpload:                {{ uploadRouteName is empty ? 'undefined' : path(uploadRouteName, uploadRouteParameters)|e4js }},
@@ -110,7 +110,7 @@
                 confirmBatchDelete: '{{ 'afe_collection_upload.confirm.batchDelete'|trans({}, 'AvocodeFormExtensions') }}'
             }
         });
-    {% endblock afe_collection_upload_afe_javascript_prototype %}
+    {% endblock afe_collection_upload_js_prototype %}
 
         // Create JSON array for existing files
         var files = {
@@ -149,16 +149,16 @@
 </script>
 {% endautoescape %}
 {% endspaceless %}
-{% endblock afe_collection_upload_afe_javascript %}
+{% endblock afe_collection_upload_js %}
 
-{% block afe_date_picker_afe_javascript %}
+{% block afe_date_picker_js %}
 {% spaceless %}
 {% autoescape false %}
 <script type="text/javascript">
     jQuery(document).ready(function($) {
         var $field = $('#{{ id }}');
 
-    {% block afe_date_picker_afe_javascript_prototype %}
+    {% block afe_date_picker_js_prototype %}
         $field.datepicker({
             format:               {{ formatSubmit|e4js }},
             weekStart:            {{ weekStart|e4js }},
@@ -174,21 +174,21 @@
             startDate:            new Date({{ startDate|e4js }}),
             endDate:              new Date({{ endDate|e4js }})
         });
-    {% endblock afe_date_picker_afe_javascript_prototype %}
+    {% endblock afe_date_picker_js_prototype %}
     });
 </script>
 {% endautoescape %}
 {% endspaceless %}
-{% endblock afe_date_picker_afe_javascript %}
+{% endblock afe_date_picker_js %}
 
-{% block afe_daterange_picker_afe_javascript %}
+{% block afe_daterange_picker_js %}
 {% spaceless %}
 {% autoescape false %}
 <script type="text/javascript">
     jQuery(document).ready(function($) {
         var $field = $('#{{ id }}');
 
-    {% block afe_daterange_picker_afe_javascript_prototype %}
+    {% block afe_daterange_picker_js_prototype %}
         $field.daterangepicker({
             format:           {{ formatSubmit|e4js }},
             opens:            {{ opens|e4js }},
@@ -207,71 +207,71 @@
             ,ranges:           {{ ranges|e4js }}
         {% endif %}
         });
-    {% endblock afe_daterange_picker_afe_javascript_prototype %}
+    {% endblock afe_daterange_picker_js_prototype %}
     });
 </script>
 {% endautoescape %}
 {% endspaceless %}
-{% endblock afe_daterange_picker_afe_javascript %}
+{% endblock afe_daterange_picker_js %}
 
-{% block afe_double_list_afe_javascript_prototype %}
+{% block afe_double_list_js_prototype %}
 {% spaceless %}
 {% autoescape false %}
     $field.doubleList();
 {% endautoescape %}
 {% endspaceless %}
-{% endblock afe_double_list_afe_javascript_prototype %}
+{% endblock afe_double_list_js_prototype %}
 
-{% block afe_double_list_document_afe_javascript %}
+{% block afe_double_list_document_js %}
 {% spaceless %}
 <script type="text/javascript">
     jQuery(document).ready(function($) {
         $field = $('#{{ id }}');
 
-    {% block afe_double_list_document_afe_javascript_prototype %}
-        {{ block('afe_double_list_afe_javascript_prototype') }}
-    {% endblock afe_double_list_document_afe_javascript_prototype %}
+    {% block afe_double_list_document_js_prototype %}
+        {{ block('afe_double_list_js_prototype') }}
+    {% endblock afe_double_list_document_js_prototype %}
     });
 </script>
 {% endspaceless %}
-{% endblock afe_double_list_document_afe_javascript %}
+{% endblock afe_double_list_document_js %}
 
-{% block afe_double_list_entity_afe_javascript %}
+{% block afe_double_list_entity_js %}
 {% spaceless %}
 <script type="text/javascript">
     jQuery(document).ready(function($) {
         $field = $('#{{ id }}');
 
-    {% block afe_double_list_entity_afe_javascript_prototype %}
-        {{ block('afe_double_list_afe_javascript_prototype') }}
-    {% endblock afe_double_list_entity_afe_javascript_prototype %}
+    {% block afe_double_list_entity_js_prototype %}
+        {{ block('afe_double_list_js_prototype') }}
+    {% endblock afe_double_list_entity_js_prototype %}
     });
 </script>
 {% endspaceless %}
-{% endblock afe_double_list_entity_afe_javascript %}
+{% endblock afe_double_list_entity_js %}
 
-{% block afe_double_list_model_afe_javascript %}
+{% block afe_double_list_model_js %}
 {% spaceless %}
 <script type="text/javascript">
     jQuery(document).ready(function($) {
         $field = $('#{{ id }}');
 
-    {% block afe_double_list_model_afe_javascript_prototype %}
-        {{ block('afe_double_list_afe_javascript_prototype') }}
-    {% endblock afe_double_list_model_afe_javascript_prototype %}
+    {% block afe_double_list_model_js_prototype %}
+        {{ block('afe_double_list_js_prototype') }}
+    {% endblock afe_double_list_model_js_prototype %}
     });
 </script>
 {% endspaceless %}
-{% endblock afe_double_list_model_afe_javascript %}
+{% endblock afe_double_list_model_js %}
 
-{% block afe_knob_afe_javascript %}
+{% block afe_knob_js %}
 {% autoescape false %}
 {% spaceless %}
 <script type="text/javascript">
     jQuery(document).ready(function($) {
         $field = $('#{{ id }}');
 
-    {% block afe_knob_afe_javascript_prototype %}
+    {% block afe_knob_js_prototype %}
         $field.knob({
             'width':            {{ width|e4js }},
             'height':           {{ height|e4js }},
@@ -289,18 +289,18 @@
             'min':              {{ min|e4js }},
             'max':              {{ max|e4js }}
         });
-    {% endblock afe_knob_afe_javascript_prototype %}
+    {% endblock afe_knob_js_prototype %}
     });
 </script>
 {% endspaceless %}
 {% endautoescape %}
-{% endblock afe_knob_afe_javascript %}
+{% endblock afe_knob_js %}
 
-{% block afe_mini_colors_afe_javascript %}
+{% block afe_mini_colors_js %}
 {% spaceless %}
 <script type="text/javascript">
     jQuery(function($) {
-    {% block afe_mini_colors_afe_javascript_prototype %}
+    {% block afe_mini_colors_js_prototype %}
         var $field = $('#{{ id }}');
         var $configs = $.extend({
             defaultValue: $field.val(),
@@ -312,36 +312,36 @@
         }, {{ configs|e4js|raw }});
 
         $field.minicolors($configs);
-    {% endblock afe_mini_colors_afe_javascript_prototype %}
+    {% endblock afe_mini_colors_js_prototype %}
     });
 </script>
 {% endspaceless %}
-{% endblock afe_mini_colors_afe_javascript %}
+{% endblock afe_mini_colors_js %}
 
-{% block afe_select2_afe_javascript %}
+{% block afe_select2_js %}
 {% spaceless %}
 {% autoescape false %}
 <script type="text/javascript">
     jQuery(document).ready(function($) {
         $field = $('#{{ id }}');
 
-    {% block afe_select2_afe_javascript_prototype %}
+    {% block afe_select2_js_prototype %}
         $field.select2({{ configs|e4js }});
-    {% endblock afe_select2_afe_javascript_prototype %}
+    {% endblock afe_select2_js_prototype %}
     });
 </script>
 {% endautoescape %}
 {% endspaceless %}
-{% endblock afe_select2_afe_javascript %}
+{% endblock afe_select2_js %}
 
-{% block afe_single_upload_afe_javascript %}
+{% block afe_single_upload_js %}
 {% spaceless %}
 {% autoescape false %}
 <script type="text/javascript">
     jQuery(document).ready(function($) {
         var $field = $('#{{ id }}');
 
-    {% block afe_single_upload_afe_javascript_prototype %}
+    {% block afe_single_upload_js_prototype %}
         $('#{{ id }}').singleUpload({
             minWidth:         {{ minWidth|e4js }},
             minHeight:        {{ minHeight|e4js }},
@@ -368,21 +368,21 @@
                 'video':            {{ 'afe_single_upload.type.video'|trans({}, 'AvocodeFormExtensions')|e4js }}
             }
         });
-    {% endblock afe_single_upload_afe_javascript_prototype %}
+    {% endblock afe_single_upload_js_prototype %}
     });
 </script>
 {% endautoescape %}
 {% endspaceless %}
-{% endblock afe_single_upload_afe_javascript %}
+{% endblock afe_single_upload_js %}
 
-{% block afe_time_picker_afe_javascript %}
+{% block afe_time_picker_js %}
 {% spaceless %}
 {% autoescape false %}
 <script type="text/javascript">
     jQuery(document).ready(function($) {
         var $field = $('#{{ id }}');
 
-    {% block afe_time_picker_afe_javascript_prototype %}
+    {% block afe_time_picker_js_prototype %}
         $field.timepicker({
             minuteStep:     {{ minute_step|e4js }},
             showSeconds:    {{ with_seconds|e4js }},
@@ -391,21 +391,21 @@
             showMeridian:   {{ show_meridian|e4js }},
             disableFocus:   {{ disable_focus|e4js }}
         });
-    {% endblock afe_time_picker_afe_javascript_prototype %}
+    {% endblock afe_time_picker_js_prototype %}
     });
 </script>
 {% endautoescape %}
 {% endspaceless %}
-{% endblock afe_time_picker_afe_javascript %}
+{% endblock afe_time_picker_js %}
 
-{% block afe_elastic_textarea_afe_javascript %}
+{% block afe_elastic_textarea_js %}
 {% spaceless %}
 <script type="text/javascript">
     jQuery(function($) {
-    {% block afe_elastic_textarea_afe_javascript_prototype %}
+    {% block afe_elastic_textarea_js_prototype %}
         $('#{{ id }}').elastic();
-    {% endblock afe_elastic_textarea_afe_javascript_prototype %}
+    {% endblock afe_elastic_textarea_js_prototype %}
     });
 </script>
 {% endspaceless %}
-{% endblock afe_elastic_textarea_afe_javascript %}
+{% endblock afe_elastic_textarea_js %}
