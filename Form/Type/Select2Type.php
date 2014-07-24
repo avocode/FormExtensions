@@ -93,6 +93,6 @@ class Select2Type extends AbstractType
      */
     public function getName()
     {
-        return 'afe_select2_' . $this->widget;
+        return 's2a_select2_' . $this->widget;
     }
 }

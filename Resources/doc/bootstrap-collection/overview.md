@@ -11,8 +11,8 @@
 
 Bootstral collection provides two form types: 
 
-* `afe_collection_table`
-* `afe_collection_fieldset`
+* `s2a_collection_table`
+* `s2a_collection_fieldset`
 
 Both equal in configuration and purpose, only with diffrent GUI.
 

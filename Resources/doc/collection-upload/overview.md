@@ -11,7 +11,7 @@
 
 ### Form Type
 
- `afe_collection_upload`
+ `s2a_collection_upload`
  
  
 ### 1. Overview
@@ -190,7 +190,7 @@ Admingenerator basic configuration:
 images:
     label:            Images
     dbType:           collection
-    formType:         afe_collection_upload
+    formType:         s2a_collection_upload
     addFormOptions:
         primary_key:          id
         nameable:             true

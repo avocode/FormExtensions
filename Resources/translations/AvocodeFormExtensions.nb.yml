@@ -1,12 +1,12 @@
-afe_bootstrap_collection:
+s2a_bootstrap_collection:
     add:          Legg til
     delete:       Slett
     confirm:
         delete:           Er du sikker på at du vil slette dette elementet?
         batchDelete:      Er du sikker på at du vil slette alle merkede elementer?
 
-afe_collection_upload:
-    file.add:     Legg til fil...
+s2a_collection_upload:
+    file.add:     "Legg til fil..."
     error:        Feil
     cancel:       Avbryt
     delete:       Slett
@@ -19,62 +19,26 @@ afe_collection_upload:
         maxFileSize:      Filen er for stor
         minFileSize:      Filen er for liten
         
-afe_date_range:
-    label:
-        apply:          Ferdig
-        clear:          Tøm
-        from:           Fra
-        to:             Til
-        week:           U
-        custom_range:   Egenspesifisert
-    days:
-        sunday:         Sø
-        monday:         Ma
-        tuesday:        Ti
-        wednesday:      On
-        thursday:       To
-        friday:         Fr
-        saturday:       Lø
-    months:
-        january:        Januar
-        february:       Februar
-        march:          Mars
-        april:          April
-        may:            Mai
-        june:           Juni
-        july:           Juli
-        august:         August
-        september:      September
-        october:        Oktober
-        november:       November
-        december:       Desember
-    ranges:
-        today:          I dag
-        yesterday:      I går
-        last-week:      Forrige uke
-        last-month:     Forrige måned
-        last-year:      Forrige år
-        
-afe_double_list:
+s2a_double_list:
     selected:           Valgt
     unselected:         Ikke valgt
         
-afe_single_upload:
+s2a_single_upload:
     button:
         add:              Last opp fil
         replace:          Erstatt fil
         cancel:           Avbryt
         delete:           Slett
     type:
-        inexistent:       Ingen<br />Fil
+        inexistent:       "Ingen<br />Fil"
         audio:            Lyd
         archive:          Arkiv
         html:             HTML
         image:            Bilde
-        pdf-document:     PDF<br />Dokument
-        plain-text:       Ren<br />Tekt
+        pdf-document:     "PDF<br />Dokument"
+        plain-text:       "Ren<br />Tekt"
         presentation:     Presentasjon
         spreadsheet:      Regneark
-        text-document:    Tekst<br />Dokument
-        unknown:          Ukjent<br />Filtype
+        text-document:    "Tekst<br />Dokument"
+        unknown:          "Ukjent<br />Filtype"
         video:            Video

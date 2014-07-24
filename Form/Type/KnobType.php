@@ -106,6 +106,6 @@ class KnobType extends AbstractType
 
     public function getName()
     {
-        return 'afe_knob';
+        return 's2a_knob';
     }
 }

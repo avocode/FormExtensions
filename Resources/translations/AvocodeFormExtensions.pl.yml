@@ -1,12 +1,12 @@
-afe_bootstrap_collection:
+s2a_bootstrap_collection:
     add:          Dodaj
     delete:       Usuń
     confirm:
         delete:           Czy potwierdzasz usunięcie elementu?
         batchDelete:      Czy potwierdzasz usunięcie wszystkich zaznaczonych elementów?
 
-afe_collection_upload:
-    file.add:     Dodaj plik...
+s2a_collection_upload:
+    file.add:     "Dodaj plik..."
     error:        Błąd
     cancel:       Anuluj
     delete:       Usuń
@@ -19,62 +19,26 @@ afe_collection_upload:
         maxFileSize:      Plik jest za duży
         minFileSize:      Plik jest za mały
         
-afe_date_range:
-    label:
-        apply:          Zastosuj
-        clear:          Wyczyść
-        from:           Od
-        to:             Do
-        week:           T
-        custom_range:   Wybierz zakres
-    days:
-        sunday:         Nie
-        monday:         Pon
-        tuesday:        Wt
-        wednesday:      Śr
-        thursday:       Czw
-        friday:         Pt
-        saturday:       So
-    months:
-        january:        Styczeń
-        february:       Luty
-        march:          Marzec
-        april:          Kwiecień
-        may:            Maj
-        june:           Czerwiec
-        july:           Lipiec
-        august:         Sierpień
-        september:      Wrzesień
-        october:        Październik
-        november:       Listopad
-        december:       Grudzień
-    ranges:
-        today:          Dzisiaj
-        yesterday:      Wczoraj
-        last-week:      Ostatni tydzień
-        last-month:     Ostatni miesiąc
-        last-year:      Ostatni rok
-        
-afe_double_list:
+s2a_double_list:
     selected:           Wybrane
     unselected:         Nie wybrane
         
-afe_single_upload:
+s2a_single_upload:
     button:
         add:              Wgraj plik
         replace:          Zamień plik
         cancel:           Anuluj
         delete:           Usuń
     type:
-        inexistent:       Brak<br />Pliku
+        inexistent:       "Brak<br />Pliku"
         audio:            Audio
         archive:          Archiwum
         html:             HTML
         image:            Obraz
-        pdf-document:     Dokument<br />PDF
-        plain-text:       Tekst
+        pdf-document:     "Dokument<br />PDF"
+        plain-text:       "Tekst"
         presentation:     Prezentacja
-        spreadsheet:      Arkusz<br />Kalkulacyjny
-        text-document:    Dokument<br />Tekstowy
-        unknown:          Nieznany<br />Typ Pliku
+        spreadsheet:      "Arkusz<br />Kalkulacyjny"
+        text-document:    "Dokument<br />Tekstowy"
+        unknown:          "Nieznany<br />Typ Pliku"
         video:            Wideo

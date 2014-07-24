@@ -17,14 +17,14 @@
 
 ### Form Type
 
-* `afe_select2_choice`
-* `afe_select2_language`
-* `afe_select2_country`
-* `afe_select2_timezone`
-* `afe_select2_locale`
-* `afe_select2_entity`
-* `afe_select2_document`
-* `afe_select2_model`
+* `s2a_select2_choice`
+* `s2a_select2_language`
+* `s2a_select2_country`
+* `s2a_select2_timezone`
+* `s2a_select2_locale`
+* `s2a_select2_entity`
+* `s2a_select2_document`
+* `s2a_select2_model`
 
 ### Description
 

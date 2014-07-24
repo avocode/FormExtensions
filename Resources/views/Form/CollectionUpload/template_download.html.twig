@@ -7,21 +7,21 @@
         {% if (file.error) { %}
         {% endraw %}
             {% if sortable %}
-            <td class="sort"><icon class="handle icon-sort icon-2x"></i></td>
+            <td class="sort"><icon class="handle fa fa-sort fa-2x"></i></td>
             {% endif %}
             <td></td>
             <td class="name"><span>{% raw %}{%=file.name%}{% endraw %}</span></td>
             <td class="size"><span>{% raw %}{%=o.formatFileSize(file.size)%}{% endraw %}</span></td>
             <td class="error" colspan="2">
                 <span class="label label-important">
-                {{- 'afe_collection_upload.error'|trans({}, 'AvocodeFormExtensions') -}}
+                {{- 's2a_collection_upload.error'|trans({}, 'AvocodeFormExtensions') -}}
                 </span> {% raw %}{%=file.error%}{% endraw %}
             </td>
         {% raw %}
         {% } else { %}
         {% endraw %}
             {% if sortable %}
-            <td class="sort"><icon class="handle icon-sort icon-2x"></i></td>
+            <td class="sort"><icon class="handle fa fa-sort fa-2x"></i></td>
             {% endif %}
             {% raw %}
             {% if (file.uid) { %}
@@ -83,20 +83,20 @@
                 {% if (file.uid) { %}
                 {% endraw %}
                     <button class="btn btn-warning remove">
-                        <i class="icon-trash icon-white"></i>
-                        <span> {{ 'afe_collection_upload.remove'|trans({}, 'AvocodeFormExtensions') }}</span>
+                        <i class="fa fa-trash-o"></i>
+                        <span> {{ 's2a_collection_upload.remove'|trans({}, 'AvocodeFormExtensions') }}</span>
                     </button>
                 {% raw %}
                 {% } else { %}
                 {% endraw %}
                     <a class="btn btn-info" target="_blank" {% raw %}href="{%=file.url%}"{% endraw %}>
-                        <i class="icon-download icon-white"></i>
-                        <span> {{ 'afe_collection_upload.download'|trans({}, 'AvocodeFormExtensions') }}</span>
+                        <i class="fa fa-download"></i>
+                        <span> {{ 's2a_collection_upload.download'|trans({}, 'AvocodeFormExtensions') }}</span>
                     </a>
                     {% if allow_delete %}
                     <button class="btn btn-danger delete">
-                        <i class="icon-trash icon-white"></i>
-                        <span> {{ 'afe_collection_upload.delete'|trans({}, 'AvocodeFormExtensions') }}</span>
+                        <i class="fa fa-trash-o"></i>
+                        <span> {{ 's2a_collection_upload.delete'|trans({}, 'AvocodeFormExtensions') }}</span>
                     </button>
                     <span class="btn btn-toggle disabled input-append">
                         <input class="toggle" type="checkbox" name="delete" value="1">

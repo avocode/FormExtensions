@@ -9,7 +9,7 @@
 
 ### Form Type
 
- `afe_single_upload`
+ `s2a_single_upload`
 
 ### 1. Overview
 

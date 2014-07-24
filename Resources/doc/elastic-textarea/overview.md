@@ -10,7 +10,7 @@
 
 ### Form Type
 
- `afe_elastic_textarea`
+ `s2a_elastic_textarea`
 
 ### Description
 

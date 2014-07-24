@@ -1,12 +1,12 @@
-afe_bootstrap_collection:
+s2a_bootstrap_collection:
     add:          Añadir
     delete:       Borrar
     confirm:
         delete:           ¿Estás seguro que quieres borrar este elemento?
         batchDelete:      ¿Estás seguro que quieres borrar todos los elementos seleccionados?
 
-afe_collection_upload:
-    file.add:     Añadir archivo...
+s2a_collection_upload:
+    file.add:     "Añadir archivo..."
     error:        Error
     cancel:       Cancelar
     delete:       Borrar
@@ -19,62 +19,26 @@ afe_collection_upload:
         maxFileSize:      El archivo es demasiado grande
         minFileSize:      El archivo es demasiado pequeño
         
-afe_date_range:
-    label:
-        apply:          Enviar
-        clear:          Limpiar
-        from:           De
-        to:             A
-        week:           S
-        custom_range:   Rango personalizado
-    days:
-        sunday:         Do
-        monday:         Lu
-        tuesday:        Ma
-        wednesday:      Mi
-        thursday:       Ju
-        friday:         Vi
-        saturday:       Sa
-    months:
-        january:        Enero
-        february:       Febrero
-        march:          Marzo
-        april:          Abril
-        may:            Mayo
-        june:           Junio
-        july:           Julio
-        august:         Agosto
-        september:      Septiembre
-        october:        Octubre
-        november:       Noviembre
-        december:       Diciembre
-    ranges:
-        today:          Hoy
-        yesterday:      Ayer
-        last-week:      Última semana
-        last-month:     Último mes
-        last-year:      Último año
-        
-afe_double_list:
+s2a_double_list:
     selected:           Seleccionado
     unselected:         Desselecionado
         
-afe_single_upload:
+s2a_single_upload:
     button:
         add:              Subir archivo
         replace:          Reemplazar archivo
         cancel:           Cancelar
         delete:           Borrar
     type:
-        inexistent:       Ningún<br />archivo
+        inexistent:       "Ningún<br />archivo"
         audio:            Audio
         archive:          Archivo
         html:             HTML
         image:            Imagen
-        pdf-document:     PDF<br />Documento
-        plain-text:       Plano<br />Text
+        pdf-document:     "PDF<br />Documento"
+        plain-text:       "Plano<br />Text"
         presentation:     Presentación
         spreadsheet:      Hoja de cálculo
-        text-document:    Texto<br />Documento
-        unknown:          Desconocido<br />Tipo de archivo
+        text-document:    "Texto<br />Documento"
+        unknown:          "Desconocido<br />Tipo de archivo"
         video:            Video

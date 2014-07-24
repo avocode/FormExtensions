@@ -1,12 +1,12 @@
-afe_bootstrap_collection:
+s2a_bootstrap_collection:
     add:          Ajouter
     delete:       Retirer
     confirm:
         delete:           Êtes-vous sûr de vouloir retirer cet élément ?
         batchDelete:      Êtes-vous sûr de vouloir retirer tous ces éléments ?
 
-afe_collection_upload:
-    file.add:     Ajouter des fichiers...
+s2a_collection_upload:
+    file.add:     "Ajouter des fichiers..."
     start:        Envoyer
     error:        Erreur
     cancel:       Annuler
@@ -20,47 +20,11 @@ afe_collection_upload:
         maxFileSize:      Fichier trop volumineux
         minFileSize:      Fichier trop petit
         
-afe_date_range:
-    label:
-        apply:          Envoyer
-        clear:          Effacer
-        from:           De
-        to:             À
-        week:           S
-        custom_range:   Période personnalisée
-    days:
-        sunday:         Di
-        monday:         Lu
-        tuesday:        Ma
-        wednesday:      Me
-        thursday:       Je
-        friday:         Ve
-        saturday:       Sa
-    months:
-        january:        Janvier
-        february:       Février
-        march:          Mars
-        april:          Avril
-        may:            Mai
-        june:           Juin
-        july:           Juillet
-        august:         Août
-        september:      Septembre
-        october:        Octobre
-        november:       Novembre
-        december:       Décembre
-    ranges:
-        today:          Aujourd'hui
-        yesterday:      Hier
-        last-week:      Semaine dernière
-        last-month:     Mois dernier 
-        last-year:      Année dernière
-        
-afe_double_list:
+s2a_double_list:
     selected:           Sélectionné
     unselected:         Non sélectionné
         
-afe_single_upload:
+s2a_single_upload:
     button:
         add:              Ajouter un fichier
         replace:          Remplacer le fichier
@@ -72,10 +36,10 @@ afe_single_upload:
         archive:          Archive
         html:             HTML
         image:            Image
-        pdf-document:     PDF
-        plain-text:       Texte brut
+        pdf-document:     "PDF"
+        plain-text:       "Texte brut"
         presentation:     Présentation
         spreadsheet:      Feuille de calcul
-        text-document:    Document texte
+        text-document:    "Document texte"
         unknown:          Inconnu
         video:            Vidéo

@@ -35,6 +35,7 @@ Enable the selected bundle in your `AppKernel.php`:
     {
         // ...
         new Vich\UploaderBundle\VichUploaderBundle(),
+?>
 ```
 
 Lastly, configure AvocodeFormExtensionsBundle to use your upload manager:

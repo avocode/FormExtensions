@@ -10,7 +10,7 @@
 
 ### Form Type
 
- `afe_mini_colors`
+ `s2a_mini_colors`
 
 ### Description
 

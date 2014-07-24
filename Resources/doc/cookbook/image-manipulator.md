@@ -36,6 +36,7 @@ Enable the selected bundle in your `AppKernel.php`:
     {
         // ...
         new Liip\ImagineBundle\LiipImagineBundle(),
+?>
 ```
 
 Lastly, configure AvocodeFormExtensionsBundle to use your image manipulator:

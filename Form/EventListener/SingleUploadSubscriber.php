@@ -151,7 +151,7 @@ class SingleUploadSubscriber implements EventSubscriberInterface
     private function isFieldSingleUpload(ResolvedFormTypeInterface $formTypeInterface = null)
     {
         if($formTypeInterface == null) return false;
-        if($formTypeInterface->getName() == 'afe_single_upload') return true;
+        if($formTypeInterface->getName() == 's2a_single_upload') return true;
 
         return $this->isFieldSingleUpload($formTypeInterface->getParent());
     }

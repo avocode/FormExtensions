@@ -1,80 +1,44 @@
-afe_bootstrap_collection:
+s2a_bootstrap_collection:
     add:          Додати
     delete:       Видалити
     confirm:
-        delete:           Ви впевнені, що хочете видалити обраний елемент?
-        batchDelete:      Ви впевнені, що хочете видалити всі обрані елементи?
+        delete:           "Ви впевнені, що хочете видалити обраний елемент?"
+        batchDelete:      "Ви впевнені, що хочете видалити всі обрані елементи?"
 
-afe_collection_upload:
-    file.add:     Додати файл...
+s2a_collection_upload:
+    file.add:     "Додати файл..."
     error:        Помилка
     cancel:       Скасувати
     delete:       Видалити
     download:     Завантажити
     confirm:
-        batchDelete:      Ви впевнені, що хочете видалити всі обрані елементи?
+        batchDelete:      "Ви впевнені, що хочете видалити всі обрані елементи?"
     errors:
         maxNumberOfFiles: Допустима кількість файлів перевищена
         acceptFileTypes:  Тип файлу не дозволений
         maxFileSize:      Файл надто великий
         minFileSize:      Файл надто малий
         
-afe_date_range:
-    label:
-        apply:          Підтвердити
-        clear:          Очистити
-        from:           Від
-        to:             До
-        week:           тиждень
-        custom_range:   Користувальницький діапазон
-    days:
-        sunday:         Нд
-        monday:         Пн
-        tuesday:        Вт
-        wednesday:      Ср
-        thursday:       Чт
-        friday:         Пт
-        saturday:       Сб
-    months:
-        january:        Січень
-        february:       Лютий
-        march:          Березень
-        april:          Квітень
-        may:            Травень
-        june:           Червень
-        july:           Липень
-        august:         Серпень
-        september:      Вересень
-        october:        Жовтень
-        november:       Листопад
-        december:       Грудень
-    ranges:
-        today:          Сьогодні
-        yesterday:      Вчора
-        last-week:      Останній тиждень
-        last-month:     Останній місяця
-        last-year:      Останній рік
-        
-afe_double_list:
+s2a_double_list:
     selected:           Вибрані
     unselected:         Не вибраний
         
-afe_single_upload:
+s2a_single_upload:
     button:
         add:              Завантажити файл
         replace:          Замінити файл
         cancel:           Скасувати
         delete:           Видалити
     type:
-        inexistent:       Ні<br />файлу
+        inexistent:       "Ні<br />файлу"
         audio:            Аудіор
         archive:          Архів
         html:             HTML
         image:            Зображення
-        pdf-document:     PDF<br />Документ
-        plain-text:       Звичайний<br />Текст
+        pdf-document:     "PDF<br />Документ"
+        plain-text:       "Звичайний<br />Текст"
         presentation:     Презентація
         spreadsheet:      Таблиця
-        text-document:    Текстовий<br />Документ
-        unknown:          Невідомий<br />Тип
+        text-document:    "Текстовий<br />Документ"
+        unknown:          "Невідомий<br />Тип"
         video:            Відео

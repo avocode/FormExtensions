@@ -24,6 +24,6 @@ class ElasticTextareaType extends AbstractType
      */
     public function getName()
     {
-        return 'afe_elastic_textarea';
+        return 's2a_elastic_textarea';
     }
 }

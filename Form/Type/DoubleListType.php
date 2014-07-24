@@ -45,6 +45,6 @@ class DoubleListType extends AbstractType
      */
     public function getName()
     {
-        return 'afe_double_list_' . $this->widget;
+        return 's2a_double_list_' . $this->widget;
     }
 }

@@ -2,17 +2,15 @@
 
 namespace Avocode\FormExtensionsBundle\Form\Type;
 
-use Avocode\FormExtensionsBundle\Form\DataTransformer\DateTimeToPartsTransformer;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormInterface;
-use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormView;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 
 /**
- * See `Resources/doc/datetime-picker/overview.md` for documentation
+ * See `Resources/doc/bootstrap-datetimepicker/overview.md` for documentation
  *
- * @author Vincent Touzet <vincent.touzet@gmail.com>
  * @author Piotr Gołębiewski <loostro@gmail.com>
  */
 class DateTimePickerType extends AbstractType
@@ -20,65 +18,29 @@ class DateTimePickerType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function buildForm(FormBuilderInterface $builder, array $options)
-    {
-        $dateOptions = array_intersect_key(
-            $options,
-            array_flip(array(
-                'format',
-                'formatSubmit',
-                'weekStart',
-                'calendarWeeks',
-                'startDate',
-                'endDate',
-                'disabled',
-                'autoclose',
-                'startView',
-                'minViewMode',
-                'todayButton',
-                'todayHighlight',
-                'clearButton',
-                'language',
-            ))
-        );
-
-        $timeOptions = array_intersect_key(
-            $options,
-            array_flip(array(
-                'minute_step',
-                'with_seconds',
-                'second_step',
-                'default_time',
-                'show_meridian',
-                'disable_focus',
-            ))
-        );
-
-        $builder
-            ->resetViewTransformers()
-            ->remove('date')
-            ->remove('time')
-            ->addViewTransformer(new DateTimeToPartsTransformer())
-            ->add('date', 'afe_date_picker', $dateOptions)
-            ->add('time', 'afe_time_picker', $timeOptions);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function buildView(FormView $view, FormInterface $form, array $options)
     {
-        $view->vars = array_replace(
-            $view->vars,
-            array(
-                'weekStart'     => $options['weekStart'],
-                'startView'     => $options['startView'],
-                'minViewMode'   => $options['minViewMode'],
-                'minute_step'   => $options['minute_step'],
-                'second_step'   => $options['second_step'],
-                'disable_focus' => $options['disable_focus'],
+        $view->vars['config'] = array_replace($options['config'], array(
+            'pickDate'      => true,
+            'pickTime'      => true,
+            'useMinutes'    => $options['with_minutes'],
+            'useSeconds'    => $options['with_seconds'],
+            'icons'         => array(
+                'time'  => "fa fa-clock-o",
+                'date'  => "fa fa-calendar",
+                'up'    => "fa fa-arrow-up",
+                'down'  => "fa fa-arrow-down"
             )
-        );
+        ));
+
+        if ($view->vars['value']) {
+            // widget requires value in format d-M-y H:i:s
+            $value = new \DateTime($view->vars['value']);
+            $widgetValue = $value->format('d-M-y H:i:s');
+            $view->vars['widget_value'] = $widgetValue;
+        }
+
+        $view->vars['widget_format'] = 'YYYY-MM-DDTHH:mm:ssZ';
     }
 
     /**
@@ -87,35 +49,28 @@ class DateTimePickerType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'format'          => 'yyyy-MM-dd',
-            'formatSubmit'    => 'yyyy-mm-dd',
-            'calendarWeeks'   => false,
-            'weekStart'       => 1,
-            'startView'       => 'month',
-            'minViewMode'     => 'days',
-            'minute_step'     => 15,
-            'second_step'     => 15,
-            'disable_focus'   => false,
-            'default_time'    => 'current',
-            'disabled'        => array(),
-            'todayButton'     => false,
-            'todayHighlight'  => false,
-            'clearButton'     => false,
-            'language'        => false,
-            'attr'            => array(
-                'class' => 'input-small'
-            ),
-        ));
-
-        $resolver->setAllowedValues(array(
-            'weekStart'   => range(0, 6),
-            'startView'   => array(0, 'month', 1, 'year', 2, 'decade'),
-            'minViewMode' => array(0, 'days', 1, 'months', 2, 'years'),
+            'widget'    => 'single_text',
+            'format'    => DateTimeType::HTML5_FORMAT,
+            'config'    => array(
+                'pickDate'      => true,
+                'pickTime'      => true,
+                'sideBySide'    => false,
+                'icons'     => array(
+                    'time'  => "fa fa-clock-o",
+                    'date'  => "fa fa-calendar",
+                    'up'    => "fa fa-arrow-up",
+                    'down'  => "fa fa-arrow-down"
+                )
+            )
         ));
 
         $resolver->setAllowedTypes(array(
-            'format'          => array('string'),
-            'formatSubmit'    => array('string'),
+            'config' => array('array')
+        ));
+
+        $resolver->setAllowedValues(array(
+            'widget' => array('single_text'),
+            'format' => array(DateTimeType::HTML5_FORMAT)
         ));
     }
 
@@ -132,6 +87,6 @@ class DateTimePickerType extends AbstractType
      */
     public function getName()
     {
-        return 'afe_datetime_picker';
+        return 's2a_datetime_picker';
     }
 }

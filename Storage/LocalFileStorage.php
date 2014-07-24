@@ -40,7 +40,7 @@ class LocalFileStorage implements FileStorageInterface
     public function storeFiles(array $files)
     {
         $handledFiles = array();
-        $sessionFiles = $this->session->get('ave_collectionUpload_files', array());
+        $sessionFiles = $this->session->get('s2a_collectionUpload_files', array());
 
         foreach ($files as $file) {
             $uid = uniqid();
@@ -61,7 +61,7 @@ class LocalFileStorage implements FileStorageInterface
             // TODO: should we add a limit to size of files in memory?
             $sessionFiles[$uid] = $fileDescriptor;
         }
-        $this->session->set('ave_collectionUpload_files', $sessionFiles);
+        $this->session->set('s2a_collectionUpload_files', $sessionFiles);
 
         return $handledFiles;
     }
@@ -76,7 +76,7 @@ class LocalFileStorage implements FileStorageInterface
             return null;
         }
 
-        $files = $this->session->get('ave_collectionUpload_files', array());
+        $files = $this->session->get('s2a_collectionUpload_files', array());
         if (!array_key_exists($fileId, $files)) {
             return null;
         }
@@ -95,7 +95,7 @@ class LocalFileStorage implements FileStorageInterface
             );
         }
         unset($files[$fileId]);
-        $this->session->set('ave_collectionUpload_files', $files);
+        $this->session->set('s2a_collectionUpload_files', $files);
 
         return $file;
     }

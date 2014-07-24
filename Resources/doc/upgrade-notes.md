@@ -67,9 +67,7 @@ For others:
 {% endblock %}
 ```
 
-The FormExtensions have been moved under `symfony2admingenerator` github organization. As such, all form types will be prefixed with `s2a_`, however to keep B/C breaks to a minimum, there are aliases created for old types (with `afe_` prefix).
-
-> Note: the `afe_` prefix is deprecated as of now, and will be removed on stable `1.0` version. Use `s2a_` prefix instead.
+The FormExtensions have been moved under `symfony2admingenerator` github organization. As such, all form types will be prefixed with `s2a_`.
 
 [form-bundle]: https://github.com/symfony2admingenerator/FormBundle
 
@@ -82,7 +80,7 @@ The twig extension block names have changed, you need to update your templates:
 * `afe_form_stylesheet` was renamed to `form_css`
 * `afe_form_javascript` was renamed to `form_js`
 
-Form type names changed: `afe_` prefix was deprecated, you should use `s2a_` instead.
+Form type names changed: `afe_` prefix is replaced by `s2a_`.
 
 ## Commit [#be706a6][cobe706a6] Remove annotations autoloading
 
@@ -94,7 +92,9 @@ This changed data type returned by `afe_daterange_picker`. Before this commit, i
 the model DateRange. Now, if you still don't use the DateRange model, it returns an associative array:
 
 ```php
+<?php
     array('from' => from_value_string, 'to' => to_value_string)
+?>
 ```
 
 #### BC Break:

@@ -1,16 +1,16 @@
-afe_bootstrap_collection:
+s2a_bootstrap_collection:
     add:          Add
     delete:       Delete
     confirm:
         delete:           Are you sure you want to delete this element?
         batchDelete:      Are you sure you want to delete all selected elements?
 
-afe_collection_upload:
-    file.add:     Add files...
+s2a_collection_upload:
+    file.add:     "Add files..."
     stat:         Start upload
     error:        Error
     cancel:       Cancel
-    delete:       Delete
+    remove:       Remove
     download:     Download
     confirm:
         batchDelete:      Are you sure you want to delete all selected elements?
@@ -20,62 +20,26 @@ afe_collection_upload:
         maxFileSize:      File is too big
         minFileSize:      File is too small
         
-afe_date_range:
-    label:
-        apply:          Submit
-        clear:          Clear
-        from:           From
-        to:             To
-        week:           W
-        custom_range:   Custom Range
-    days:
-        sunday:         Su
-        monday:         Mo
-        tuesday:        Tu
-        wednesday:      We
-        thursday:       Th
-        friday:         Fr
-        saturday:       Sa
-    months:
-        january:        January
-        february:       February
-        march:          March
-        april:          April
-        may:            May
-        june:           June
-        july:           July
-        august:         August
-        september:      September
-        october:        October
-        november:       November
-        december:       December
-    ranges:
-        today:          Today
-        yesterday:      Yesterday
-        last-week:      Last week
-        last-month:     Last month
-        last-year:      Last year
-        
-afe_double_list:
+s2a_double_list:
     selected:           Selected
     unselected:         Unselected
         
-afe_single_upload:
+s2a_single_upload:
     button:
         add:              Upload file
         replace:          Replace file
         cancel:           Cancel
         delete:           Delete
     type:
-        inexistent:       No<br />File
+        inexistent:       "No<br />File"
         audio:            Audio
         archive:          Archive
         html:             HTML
         image:            Image
-        pdf-document:     PDF<br />Document
-        plain-text:       Plain<br />Text
+        pdf-document:     "PDF<br />Document"
+        plain-text:       "Plain<br />Text"
         presentation:     Presentation
         spreadsheet:      Spreadsheet
-        text-document:    Text<br />Document
-        unknown:          Unknown<br />Filetype
+        text-document:    "Text<br />Document"
+        unknown:          "Unknown<br />Filetype"
         video:            Video

@@ -10,7 +10,7 @@
 
 ### Form Type
 
- `afe_knob`
+ `s2a_knob`
 
 ### Description
 

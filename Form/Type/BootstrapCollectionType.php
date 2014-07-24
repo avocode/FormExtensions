@@ -63,6 +63,6 @@ class BootstrapCollectionType extends AbstractType
      */
     public function getName()
     {
-        return 'afe_collection_' . $this->widget;
+        return 's2a_collection_' . $this->widget;
     }
 }

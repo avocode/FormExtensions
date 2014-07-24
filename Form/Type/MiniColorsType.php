@@ -95,6 +95,6 @@ class MiniColorsType extends AbstractType
      */
     public function getName()
     {
-        return 'afe_mini_colors';
+        return 's2a_mini_colors';
     }
 }
