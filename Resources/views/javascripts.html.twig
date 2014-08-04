@@ -1,6 +1,7 @@
 {% block avocode_form_javascripts %}
 
-    {% javascripts filter='?uglifyjs2' output='assetic/js/compiled/avocodeformextensions/blueimp.jquery-file-upload.min.js'
+    {% javascripts package='formextensions_js' filter='?uglifyjs2' 
+        output='assetic/js/compiled/avocodeformextensions/blueimp.jquery-file-upload.min.js'
         'bundles/avocodeformextensions/blueimp-javascript-templates/js/tmpl.js'
         'bundles/avocodeformextensions/blueimp-load-image/js/load-image.js'
         'bundles/avocodeformextensions/blueimp-load-image/js/load-image-ios.js'
@@ -19,7 +20,8 @@
         <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
 
-    {% javascripts filter='?uglifyjs2' output='assetic/js/compiled/avocodeformextensions/form-extensions.min.js'
+    {% javascripts package='formextensions_js' filter='?uglifyjs2' 
+        output='assetic/js/compiled/avocodeformextensions/form-extensions.min.js'
         'bundles/avocodeformextensions/bootstrap-collection/js/bootstrap-collection.js'
         'bundles/avocodeformextensions/bootstrap-datetimepicker/js/vendor/moment.js'
         'bundles/avocodeformextensions/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js'
@@ -37,15 +39,15 @@
 
     <!-- locale -->
     {% if app.request.locale in ['ca', 'cs', 'da', 'de', 'es', 'et', 'eu', 'fr', 'gl', 'he', 'hr', 'hu', 'is', 'it', 'ja', 'lt', 'lv', 'mk', 'nl', 'no', 'pl', 'pt-BR', 'pt-PT', 'ro', 'ru', 'sk', 'sv', 'tr', 'ua', 'vi', 'zh-CN', 'zh-TW'] %}
-    <script type="text/javascript" src="{{ asset('bundles/avocodeformextensions/select2/js/i18n/select2_locale_' ~ app.request.locale ~ '.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/avocodeformextensions/select2/js/i18n/select2_locale_' ~ app.request.locale ~ '.js', 'formextensions_js') }}"></script>
     {% endif %}
 
     {% if app.request.locale in ['cs', 'de', 'es', 'eu', 'it', 'nl', 'pl', 'pt-BR', 'ru', 'zh-CN'] %}
-    <script type="text/javascript" src="{{ asset('bundles/avocodeformextensions/bootstrap-select/js/i18n/defaults-' ~ app.request.locale ~ '.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/avocodeformextensions/bootstrap-select/js/i18n/defaults-' ~ app.request.locale ~ '.js', 'formextensions_js') }}"></script>
     {% endif %}
 
     {% if app.request.locale in ['ar-ma', 'ar', 'bg', 'br', 'bs', 'ca', 'cs', 'cv', 'da', 'de', 'el', 'en-au', 'en-ca', 'en-gb', 'eo', 'es', 'et', 'eu', 'fa', 'fi', 'fr-ca', 'fr', 'gl', 'he', 'hi', 'hr', 'hu', 'id', 'is', 'it', 'ja', 'ka', 'ko', 'lt', 'lv', 'ml', 'mr', 'ms-mv', 'nb', 'ne', 'nl', 'nn', 'pl', 'pt-BR', 'pt', 'ro', 'ru', 'sk', 'sl', 'sq', 'sv', 'th', 'tr', 'tzm-la', 'tzm', 'uk', 'uz', 'vn', 'zh-CN', 'zh-TW'] %}
-    <script type="text/javascript" src="{{ asset('bundles/avocodeformextensions/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.' ~ app.request.locale ~ '.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/avocodeformextensions/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.' ~ app.request.locale ~ '.js', 'formextensions_js') }}"></script>
     {% endif %}
 
 {% endblock avocode_form_javascripts %}
