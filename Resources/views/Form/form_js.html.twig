@@ -9,8 +9,8 @@
         prototype_name:   {{ prototype_name|e4js }},
         trans: {
             new_label:      {{ new_label|trans({}, translation_domain)|e4js }},
-            confirm:        {{ 's2a_bootstrap_collection.confirm.delete'|trans({}, 'AvocodeFormExtensions')|e4js }},
-            confirm_batch:  {{ 's2a_bootstrap_collection.confirm.batchDelete'|trans({}, 'AvocodeFormExtensions')|e4js }}
+            confirm:        {{ 's2a_bootstrap_collection.confirm.delete'|trans({}, 'AdmingeneratorFormExtensions')|e4js }},
+            confirm_batch:  {{ 's2a_bootstrap_collection.confirm.batchDelete'|trans({}, 'AdmingeneratorFormExtensions')|e4js }}
         },
         javascript: function(id) {
         {% if prototype is defined %}
@@ -94,11 +94,11 @@
             previewMaxWidth:          {{ previewMaxWidth|e4js }},
             previewMaxHeight:         {{ previewMaxHeight|e4js }},
             messages: {
-                maxNumberOfFiles:   '{{ 's2a_collection_upload.errors.maxNumberOfFiles'|trans({}, 'AvocodeFormExtensions') }}',
-                acceptFileTypes:    '{{ 's2a_collection_upload.errors.acceptFileTypes'|trans({}, 'AvocodeFormExtensions') }}',
-                maxFileSize:        '{{ 's2a_collection_upload.errors.maxFileSize'|trans({}, 'AvocodeFormExtensions') }}',
-                minFileSize:        '{{ 's2a_collection_upload.errors.minFileSize'|trans({}, 'AvocodeFormExtensions') }}',
-                confirmBatchDelete: '{{ 's2a_collection_upload.confirm.batchDelete'|trans({}, 'AvocodeFormExtensions') }}'
+                maxNumberOfFiles:   '{{ 's2a_collection_upload.errors.maxNumberOfFiles'|trans({}, 'AdmingeneratorFormExtensions') }}',
+                acceptFileTypes:    '{{ 's2a_collection_upload.errors.acceptFileTypes'|trans({}, 'AdmingeneratorFormExtensions') }}',
+                maxFileSize:        '{{ 's2a_collection_upload.errors.maxFileSize'|trans({}, 'AdmingeneratorFormExtensions') }}',
+                minFileSize:        '{{ 's2a_collection_upload.errors.minFileSize'|trans({}, 'AdmingeneratorFormExtensions') }}',
+                confirmBatchDelete: '{{ 's2a_collection_upload.confirm.batchDelete'|trans({}, 'AdmingeneratorFormExtensions') }}'
             }
         });
     {% endblock s2a_collection_upload_js_prototype %}
@@ -288,18 +288,18 @@
             deleteable:       {{ deleteable|e4js }},
             widget_name:      {{ (form.parent.vars.full_name ~ '['~name~']')|e4js }},
             filetypes:  {
-                'inexistent':       {{ 's2a_single_upload.type.inexistent'|trans({}, 'AvocodeFormExtensions')|e4js }},
-                'audio':            {{ 's2a_single_upload.type.audio'|trans({}, 'AvocodeFormExtensions')|e4js }},
-                'archive':          {{ 's2a_single_upload.type.archive'|trans({}, 'AvocodeFormExtensions')|e4js }},
-                'html':             {{ 's2a_single_upload.type.html'|trans({}, 'AvocodeFormExtensions')|e4js }},
-                'image':            {{ 's2a_single_upload.type.image'|trans({}, 'AvocodeFormExtensions')|e4js }},
-                'pdf-document':     {{ 's2a_single_upload.type.pdf-document'|trans({}, 'AvocodeFormExtensions')|e4js }},
-                'plain-text':       {{ 's2a_single_upload.type.plain-text'|trans({}, 'AvocodeFormExtensions')|e4js }},
-                'presentation':     {{ 's2a_single_upload.type.presentation'|trans({}, 'AvocodeFormExtensions')|e4js }},
-                'spreadsheet':      {{ 's2a_single_upload.type.spreadsheet'|trans({}, 'AvocodeFormExtensions')|e4js }},
-                'text-document':    {{ 's2a_single_upload.type.text-document'|trans({}, 'AvocodeFormExtensions')|e4js }},
-                'unknown':          {{ 's2a_single_upload.type.unknown'|trans({}, 'AvocodeFormExtensions')|e4js }},
-                'video':            {{ 's2a_single_upload.type.video'|trans({}, 'AvocodeFormExtensions')|e4js }}
+                'inexistent':       {{ 's2a_single_upload.type.inexistent'|trans({}, 'AdmingeneratorFormExtensions')|e4js }},
+                'audio':            {{ 's2a_single_upload.type.audio'|trans({}, 'AdmingeneratorFormExtensions')|e4js }},
+                'archive':          {{ 's2a_single_upload.type.archive'|trans({}, 'AdmingeneratorFormExtensions')|e4js }},
+                'html':             {{ 's2a_single_upload.type.html'|trans({}, 'AdmingeneratorFormExtensions')|e4js }},
+                'image':            {{ 's2a_single_upload.type.image'|trans({}, 'AdmingeneratorFormExtensions')|e4js }},
+                'pdf-document':     {{ 's2a_single_upload.type.pdf-document'|trans({}, 'AdmingeneratorFormExtensions')|e4js }},
+                'plain-text':       {{ 's2a_single_upload.type.plain-text'|trans({}, 'AdmingeneratorFormExtensions')|e4js }},
+                'presentation':     {{ 's2a_single_upload.type.presentation'|trans({}, 'AdmingeneratorFormExtensions')|e4js }},
+                'spreadsheet':      {{ 's2a_single_upload.type.spreadsheet'|trans({}, 'AdmingeneratorFormExtensions')|e4js }},
+                'text-document':    {{ 's2a_single_upload.type.text-document'|trans({}, 'AdmingeneratorFormExtensions')|e4js }},
+                'unknown':          {{ 's2a_single_upload.type.unknown'|trans({}, 'AdmingeneratorFormExtensions')|e4js }},
+                'video':            {{ 's2a_single_upload.type.video'|trans({}, 'AdmingeneratorFormExtensions')|e4js }}
             }
         });
     {% endblock s2a_single_upload_js_prototype %}

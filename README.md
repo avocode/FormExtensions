@@ -21,7 +21,7 @@ Add this to your `composer.json`:
 
 ```json
 "require": {
-    "avocode/form-extensions-bundle": "dev-master"
+    "symfony2admingenerator/form-extensions-bundle": "dev-master"
 }
 ```
 
@@ -35,7 +35,7 @@ public function registerBundles()
     $bundles = array(
         // ...
         new Admingenerator\FormBundle\AdmingeneratorFormBundle(),
-        new Avocode\FormExtensionsBundle\AvocodeFormExtensionsBundle(),
+        new Admingenerator\FormExtensionsBundle\AdmingeneratorFormExtensionsBundle(),
         // AdmingeneratorGeneratorBundle is optional, however if you're useing it
         // make sure it is loaded AFTER AvocodeFormExtensionsBundle
         new Admingenerator\GeneratorBundle\AdmingeneratorGeneratorBundle(),
@@ -44,7 +44,7 @@ public function registerBundles()
 ?>
 ```
 
-To make `avocode/form-extensions-bundle` forms work, you need to edit your base 
+To make `symfony2admingenerator/form-extensions-bundle` forms work, you need to edit your base 
 template, and include static and dynamic stylesheets and javascripts. 
 
 For Admingenerator users:
@@ -55,13 +55,13 @@ For Admingenerator users:
 {% block stylesheets %}
     {{ parent() }}
 
-    {% include 'AvocodeFormExtensionsBundle::stylesheets.html.twig' %}
+    {% include 'AdmingeneratorFormExtensionsBundle::stylesheets.html.twig' %}
 {% endblock %}
 
 {% block javascripts %}
     {{ parent() }}
 
-    {% include 'AvocodeFormExtensionsBundle::javascripts.html.twig' %}
+    {% include 'AdmingeneratorFormExtensionsBundle::javascripts.html.twig' %}
 {% endblock %}
 ```
 
@@ -69,7 +69,7 @@ For others:
 
 ```html+django
 {% block stylesheets %}
-    {% include 'AvocodeFormExtensionsBundle::stylesheets.html.twig' %}
+    {% include 'AdmingeneratorFormExtensionsBundle::stylesheets.html.twig' %}
     
     {% if form is defined %}
         {{ form_css(form) }}
@@ -77,7 +77,7 @@ For others:
 {% endblock %}
 
 {% block javascripts %}
-    {% include 'AvocodeFormExtensionsBundle::javascripts.html.twig' %}
+    {% include 'AdmingeneratorFormExtensionsBundle::javascripts.html.twig' %}
     
     {% if form is defined %}
         {{ form_js(form) }}

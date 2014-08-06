@@ -1,6 +1,6 @@
 <?php
 
-namespace Avocode\FormExtensionsBundle\Form\EventListener;
+namespace Admingenerator\FormExtensionsBundle\Form\EventListener;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\Form\FormEvent;

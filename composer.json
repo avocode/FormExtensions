@@ -1,5 +1,5 @@
 {
-    "name": "avocode/form-extensions-bundle",
+    "name": "symfony2admingenerator/form-extensions-bundle",
     "type": "symfony-bundle",
     "description": "Add additional form types to symfony2",
     "license": "MIT and Apache-2.0",
@@ -11,7 +11,7 @@
         },
         {
             "name": "Symfony community",
-            "homepage": "https://github.com/avocode/FormExtensions/graphs/contributors"
+            "homepage": "https://github.com/symfony2admingenerator/FormExtensions/graphs/contributors"
         }
     ],
     "require": {
@@ -26,13 +26,13 @@
         "components/font-awesome": "~4.0"
     },
     "suggest": {
-        "cedriclombardot/admingenerator-generator-bundle": "The missing symfony2 admin generator",
+        "symfony2admingenerator/admingenerator-generator-bundle": "The missing symfony2 admin generator",
         "liip/imagine-bundle": "Apply filters on preview images"
     },
     "autoload": {
         "psr-0": {
-            "Avocode\\FormExtensionsBundle": ""
+            "Admingenerator\\FormExtensionsBundle": ""
         }
     },
-    "target-dir": "Avocode/FormExtensionsBundle"
+    "target-dir": "Admingenerator/FormExtensionsBundle"
 }

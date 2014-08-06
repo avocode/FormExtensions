@@ -1,6 +1,6 @@
 <?php
 
-namespace Avocode\FormExtensionsBundle\Form\Extension;
+namespace Admingenerator\FormExtensionsBundle\Form\Extension;
 
 use Symfony\Component\Form\AbstractTypeExtension;
 use Symfony\Component\Form\FormInterface;

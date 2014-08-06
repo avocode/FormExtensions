@@ -1,4 +1,4 @@
-Avocode FormExtensions Bundle
+AdmingeneratorFormExtensionsBundle
 -------------------------------------------------
 This bundle includes various third-party software assets each distributed 
 under it's own license. Bundle files which are not subject to any of these 
@@ -28,25 +28,13 @@ third party software also licensed under MIT license.
 For more information read 
 /Resources/public/collection-upload/LICENSE-NOTICE
 
-Date Picker
+Bootstrap Datetimepicker
 ---------------------
-Version:  1.1.0
-Location: /Resources/public/datepicker
-License:  /Resources/public/datepicker/LICENSE
+Version:  3.0.0
+Location: /Resources/public/bootstrap-datetimepicker
+License:  /Resources/public/bootstrap-datetimepicker/LICENSE
 
-Date Picker is licensed under the Apache Software Foundation License Version 2.0.
-
-DateRange Picker
----------------------
-Version:  1.1
-Location: /Resources/public/daterangepicker
-License:  /Resources/public/daterangepicker/LICENSE
-
-Date Picker is licensed under the Apache Software Foundation License Version 2.0 
-and uses third party software also licensed under MIT license.
-
-For more information read 
-/Resources/public/daterangepicker/LICENSE-NOTICE
+Bootstrap Datetimepicker is licensed under the MIT license.
 
 Knob
 ---------------------
@@ -82,14 +70,6 @@ third party assets licensed under Creative Commons Attribution-ShareAlike 3.0 Ho
 
 For more information read 
 /Resources/public/single-upload/LICENSE-NOTICE
-
-Time Picker
----------------------
-Version:  0.2.3
-Location: /Resources/public/timepicker
-License:  /Resources/public/timepicker/LICENSE
-
-Time Picker is licensed under the MIT license.
 
 Elastic Textarea
 ---------------------

@@ -1,8 +1,8 @@
 <?php
 
-namespace Avocode\FormExtensionsBundle\Form\Extension;
+namespace Admingenerator\FormExtensionsBundle\Form\Extension;
 
-use Avocode\FormExtensionsBundle\Form\EventListener\SingleUploadSubscriber;
+use Admingenerator\FormExtensionsBundle\Form\EventListener\SingleUploadSubscriber;
 use Symfony\Component\Form\AbstractTypeExtension;
 use Symfony\Component\Form\FormBuilderInterface;
 

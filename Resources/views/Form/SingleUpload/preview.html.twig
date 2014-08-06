@@ -1,4 +1,4 @@
-{% import "AvocodeFormExtensionsBundle:Form/SingleUpload:macros.html.twig" as macros %}
+{% import "AdmingeneratorFormExtensionsBundle:Form/SingleUpload:macros.html.twig" as macros %}
 
 {% set file = form.vars.data %}
 {% set object = form.parent.vars.value %}
@@ -14,7 +14,7 @@
                     {{- 'min-width:'  ~ minWidth   ~'px;' -}}
                     {{- 'min-height:' ~ minHeight  ~'px;' -}}" />
     {% else %}
-        <div class="fileicon {{ fileType }}">{{ ('s2a_single_upload.type.'~fileType)|trans({}, 'AvocodeFormExtensions')|raw }}</div>
+        <div class="fileicon {{ fileType }}">{{ ('s2a_single_upload.type.'~fileType)|trans({}, 'AdmingeneratorFormExtensions')|raw }}</div>
     {% endif %}
     {% if nameable is not empty %}
     <div class="row-fluid">

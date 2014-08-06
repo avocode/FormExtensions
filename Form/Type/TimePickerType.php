@@ -1,8 +1,7 @@
 <?php
 
-namespace Avocode\FormExtensionsBundle\Form\Type;
+namespace Admingenerator\FormExtensionsBundle\Form\Type;
 
-use Avocode\FormExtensionsBundle\Form\EventListener\DateTimePickerSubscriber;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormInterface;

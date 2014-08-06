@@ -1,8 +1,8 @@
 <?php
 
-namespace Avocode\FormExtensionsBundle;
+namespace Admingenerator\FormExtensionsBundle;
 
-use Avocode\FormExtensionsBundle\DependencyInjection\Compiler\FormCompilerPass;
+use Admingenerator\FormExtensionsBundle\DependencyInjection\Compiler\FormCompilerPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
@@ -11,7 +11,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  *
  * @author Piotr Gołębiewski <loostro@gmail.com>
  */
-class AvocodeFormExtensionsBundle extends Bundle
+class AdmingeneratorFormExtensionsBundle extends Bundle
 {
     public function build(ContainerBuilder $container)
     {

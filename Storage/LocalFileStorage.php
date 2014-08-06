@@ -1,7 +1,7 @@
 <?php
-namespace Avocode\FormExtensionsBundle\Storage;
+namespace Admingenerator\FormExtensionsBundle\Storage;
 
-use Avocode\FormExtensionsBundle\Storage\FileStorageInterface;
+use Admingenerator\FormExtensionsBundle\Storage\FileStorageInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
@@ -35,7 +35,7 @@ class LocalFileStorage implements FileStorageInterface
 
     /**
      * (non-PHPdoc)
-     * @see \Avocode\FormExtensionsBundle\Storage\FileStorageInterface::storeFiles()
+     * @see \Admingenerator\FormExtensionsBundle\Storage\FileStorageInterface::storeFiles()
      */
     public function storeFiles(array $files)
     {
@@ -68,7 +68,7 @@ class LocalFileStorage implements FileStorageInterface
 
     /**
      * (non-PHPdoc)
-     * @see \Avocode\FormExtensionsBundle\Storage\FileStorageInterface::getFile()
+     * @see \Admingenerator\FormExtensionsBundle\Storage\FileStorageInterface::getFile()
      */
     public function getFile($fileId = null)
     {

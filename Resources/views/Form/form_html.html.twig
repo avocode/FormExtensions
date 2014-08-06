@@ -10,8 +10,8 @@
         {{ form_errors(form) }}
     {% endif %}
     <div id="{{ id ~ '_toolbar' }}" class="btn-toolbar form-actions form-actions-condensed">
-        {%- include "AvocodeFormExtensionsBundle:Form/BootstrapCollection:collection_add.html.twig" -%}
-        {%- include "AvocodeFormExtensionsBundle:Form/BootstrapCollection:collection_batch_delete.html.twig" -%}
+        {%- include "AdmingeneratorFormExtensionsBundle:Form/BootstrapCollection:collection_add.html.twig" -%}
+        {%- include "AdmingeneratorFormExtensionsBundle:Form/BootstrapCollection:collection_batch_delete.html.twig" -%}
     </div>
     <div class="collection">
         {% for item in form %}
@@ -28,7 +28,7 @@
     <legend>{{ form_label(item) }}</legend>
     {{ form_widget(item) }}
     {{ form_errors(item) }}
-    {%- include "AvocodeFormExtensionsBundle:Form/BootstrapCollection:collection_delete.html.twig" -%}
+    {%- include "AdmingeneratorFormExtensionsBundle:Form/BootstrapCollection:collection_delete.html.twig" -%}
 </fieldset>
 {% endblock s2a_collection_fieldset_item %}
 
@@ -48,8 +48,8 @@
     <thead>
       <tr>
         <td id="{{ id ~ '_toolbar' }}" class="btn-toolbar form-actions form-actions-condensed" colspan="4">
-            {%- include "AvocodeFormExtensionsBundle:Form/BootstrapCollection:collection_add.html.twig" -%}
-            {%- include "AvocodeFormExtensionsBundle:Form/BootstrapCollection:collection_batch_delete.html.twig" -%}
+            {%- include "AdmingeneratorFormExtensionsBundle:Form/BootstrapCollection:collection_add.html.twig" -%}
+            {%- include "AdmingeneratorFormExtensionsBundle:Form/BootstrapCollection:collection_batch_delete.html.twig" -%}
         </td>
       </tr>
     </thead>
@@ -74,7 +74,7 @@
                         <i class="icon-chevron-right"></i>
                         {{- form_label(item) -}}
                     </a>
-                    {%- include "AvocodeFormExtensionsBundle:Form/BootstrapCollection:collection_delete.html.twig" -%}
+                    {%- include "AdmingeneratorFormExtensionsBundle:Form/BootstrapCollection:collection_delete.html.twig" -%}
                 </div>
                 <div id="{{ 'accordion_body_' ~ item.vars.id }}" class="accordion-body collapse in">
                     <div class="accordion-inner">
@@ -88,7 +88,7 @@
 {% else %}
     <td class="collection-item-simple">
         <div class="form-horizontal">
-            {%- include "AvocodeFormExtensionsBundle:Form/BootstrapCollection:collection_delete.html.twig" -%}
+            {%- include "AdmingeneratorFormExtensionsBundle:Form/BootstrapCollection:collection_delete.html.twig" -%}
             <div class="control-group">
                 {{ form_label(item) }}
                 <div class="controls">
@@ -114,26 +114,26 @@
             {% if allow_add %}
             <span class="btn btn-success fileinput">
                 <i class="icon-plus icon-white"></i>
-                <span> {{ 's2a_collection_upload.file.add'|trans({}, 'AvocodeFormExtensions') }}</span>
+                <span> {{ 's2a_collection_upload.file.add'|trans({}, 'AdmingeneratorFormExtensions') }}</span>
                 <input type="file" {{ block('widget_attributes') }} multiple/>
             </span>
             {% endif %}
             {% if not autoUpload and uploadRouteName is not empty %}
             <button type="submit" class="btn btn-primary start">
                 <i class="icon-upload icon-white"></i>
-                <span> {{ 's2a_collection_upload.start'|trans({}, 'AvocodeFormExtensions') }}</span>
+                <span> {{ 's2a_collection_upload.start'|trans({}, 'AdmingeneratorFormExtensions') }}</span>
             </button>
             {% endif %}
             {% if allow_add %}
             <button type="reset" class="btn btn-warning cancel">
                 <i class="icon-ban-circle icon-white"></i>
-                <span> {{ 's2a_collection_upload.cancel'|trans({}, 'AvocodeFormExtensions') }}</span>
+                <span> {{ 's2a_collection_upload.cancel'|trans({}, 'AdmingeneratorFormExtensions') }}</span>
             </button>
             {% endif %}
             {% if allow_delete %}
             <button type="button" class="btn btn-danger delete">
                 <i class="icon-trash icon-white"></i>
-                <span> {{ 's2a_collection_upload.delete'|trans({}, 'AvocodeFormExtensions') }}</span>
+                <span> {{ 's2a_collection_upload.delete'|trans({}, 'AdmingeneratorFormExtensions') }}</span>
             </button>
             <label class="btn btn-toggle disabled input-append">
                 <input type="checkbox" class="toggle">
@@ -144,10 +144,10 @@
             </div>
         </div>
         {% endif %}
-        {% include "AvocodeFormExtensionsBundle:Form/CollectionUpload:presentation_table.html.twig" %}
-        {% include "AvocodeFormExtensionsBundle:Form/CollectionUpload:template_download.html.twig" %}
+        {% include "AdmingeneratorFormExtensionsBundle:Form/CollectionUpload:presentation_table.html.twig" %}
+        {% include "AdmingeneratorFormExtensionsBundle:Form/CollectionUpload:template_download.html.twig" %}
         {% if allow_add %}
-            {% include "AvocodeFormExtensionsBundle:Form/CollectionUpload:template_upload.html.twig" %}
+            {% include "AdmingeneratorFormExtensionsBundle:Form/CollectionUpload:template_upload.html.twig" %}
         {% endif %}
     </div>
 {% endspaceless %}
@@ -157,13 +157,13 @@
 {% spaceless %}
     <div id="{{ id ~ '_widget_container' }}" class="double-list">
         <div class="list-unselected dropdown open">
-            {% include "AvocodeFormExtensionsBundle:Form/DoubleList:unselected_list.html.twig" %}
+            {% include "AdmingeneratorFormExtensionsBundle:Form/DoubleList:unselected_list.html.twig" %}
         </div>
         <div class="list-controls">
-            {% include "AvocodeFormExtensionsBundle:Form/DoubleList:controls.html.twig" %}
+            {% include "AdmingeneratorFormExtensionsBundle:Form/DoubleList:controls.html.twig" %}
         </div>
         <div class="list-selected dropdown open">
-            {% include "AvocodeFormExtensionsBundle:Form/DoubleList:selected_list.html.twig" %}
+            {% include "AdmingeneratorFormExtensionsBundle:Form/DoubleList:selected_list.html.twig" %}
         </div>
         {{ block('choice_widget') }}
     </div>
@@ -212,13 +212,13 @@
     <div id="{{ id ~ '_widget_container' }}" class="single-upload">
         <div class="btn-toolbar form-actions form-actions-condensed singleupload-buttonbar">
             <span class="btn btn-success fileinput">
-                {% include "AvocodeFormExtensionsBundle:Form/SingleUpload:upload.html.twig" %}
+                {% include "AdmingeneratorFormExtensionsBundle:Form/SingleUpload:upload.html.twig" %}
                 <input type="file" id="{{ id }}" name="{{ form.parent.vars.full_name ~ '['~name~'][file]' }}" />
             </span>
-            {% include "AvocodeFormExtensionsBundle:Form/SingleUpload:controls.html.twig" %}
+            {% include "AdmingeneratorFormExtensionsBundle:Form/SingleUpload:controls.html.twig" %}
         </div>
         <div id="{{ id ~ '_preview' }}" class="single-upload-preview">
-            {% include "AvocodeFormExtensionsBundle:Form/SingleUpload:preview.html.twig" %}
+            {% include "AdmingeneratorFormExtensionsBundle:Form/SingleUpload:preview.html.twig" %}
         </div>
     </div>
 {% endspaceless %}

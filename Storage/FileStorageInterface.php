@@ -1,5 +1,5 @@
 <?php
-namespace Avocode\FormExtensionsBundle\Storage;
+namespace Admingenerator\FormExtensionsBundle\Storage;
 
 interface FileStorageInterface
 {

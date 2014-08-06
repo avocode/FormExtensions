@@ -1,6 +1,6 @@
 <?php
 
-namespace Avocode\FormExtensionsBundle\Form\DataTransformer;
+namespace Admingenerator\FormExtensionsBundle\Form\DataTransformer;
 
 use Symfony\Component\Form\DataTransformerInterface;
 use Symfony\Component\Form\Exception\TransformationFailedException;

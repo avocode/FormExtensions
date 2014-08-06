@@ -1,8 +1,9 @@
 <?php
 
-namespace Avocode\FormExtensionsBundle\Form\Type;
+namespace Admingenerator\FormExtensionsBundle\Form\Type;
 
-use Avocode\FormExtensionsBundle\Form\EventListener\CollectionUploadSubscriber;
+use Admingenerator\FormExtensionsBundle\Form\EventListener\CollectionUploadSubscriber;
+use Admingenerator\FormExtensionsBundle\Storage\FileStorageInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -10,7 +11,6 @@ use Symfony\Component\Form\FormInterface;
 use Symfony\Component\Form\FormView;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
-use Avocode\FormExtensionsBundle\Storage\FileStorageInterface;
 
 /**
  * See `Resources/doc/collection-upload/overview.md` for documentation

@@ -1,15 +1,15 @@
 <?php
 
-namespace Avocode\FormExtensionsBundle\Form\EventListener;
+namespace Admingenerator\FormExtensionsBundle\Form\EventListener;
 
-use Avocode\FormExtensionsBundle\Form\Model\UploadCollectionFileInterface;
+use Admingenerator\FormExtensionsBundle\Form\Model\UploadCollectionFileInterface;
+use Admingenerator\FormExtensionsBundle\Storage\FileStorageInterface;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\Form\Exception\UnexpectedTypeException;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
-use Avocode\FormExtensionsBundle\Storage\FileStorageInterface;
 
 /**
  * @author Piotr Gołębiewski <loostro@gmail.com>
@@ -166,7 +166,7 @@ class CollectionUploadSubscriber implements EventSubscriberInterface
 
                 $file = new $this->dataClass();
                 if (!$file instanceof UploadCollectionFileInterface) {
-                    throw new UnexpectedTypeException($file, '\Avocode\FormExtensionsBundle\Form\Model\UploadCollectionFileInterface');
+                    throw new UnexpectedTypeException($file, '\Admingenerator\FormExtensionsBundle\Form\Model\UploadCollectionFileInterface');
                 }
 
                 $file->setFile($upload);

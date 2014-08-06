@@ -1,6 +1,6 @@
 <?php
 
-namespace Avocode\FormExtensionsBundle\DependencyInjection;
+namespace Admingenerator\FormExtensionsBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -15,7 +15,7 @@ use Symfony\Component\DependencyInjection\Reference;
  *
  * @author Piotr Gołębiewski <loostro@gmail.com>
  */
-class AvocodeFormExtensionsExtension extends Extension
+class AdmingeneratorFormExtensionsExtension extends Extension
 {
     /**
      * {@inheritDoc}
@@ -28,9 +28,9 @@ class AvocodeFormExtensionsExtension extends Extension
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.xml');
 
-        $container->setParameter('avocode.form.upload_manager', $config['upload_manager']);
-        $container->setParameter('avocode.form.image_manipulator', $config['image_manipulator']);
-        $container->setParameter('avocode.form.twig', $config['twig']);
+        $container->setParameter('admingenerator.form.upload_manager', $config['upload_manager']);
+        $container->setParameter('admingenerator.form.image_manipulator', $config['image_manipulator']);
+        $container->setParameter('admingenerator.form.twig', $config['twig']);
 
         $this->loadCollectionUploadListener($config['collection_upload'], $container);
         $this->loadBootstrapCollectionTypes($container);
@@ -40,7 +40,7 @@ class AvocodeFormExtensionsExtension extends Extension
 
     private function loadBootstrapCollectionTypes(ContainerBuilder $container)
     {
-        $serviceId = 'avocode.form.extensions.type.bootstrap_collection';
+        $serviceId = 'admingenerator.form.extensions.type.bootstrap_collection';
 
         $bootstrapCollectionTypes = array('fieldset', 'table');
 
@@ -57,7 +57,7 @@ class AvocodeFormExtensionsExtension extends Extension
 
     private function loadDoubleListTypes(ContainerBuilder $container)
     {
-        $serviceId = 'avocode.form.extensions.type.double_list';
+        $serviceId = 'admingenerator.form.extensions.type.double_list';
 
         $doubleListTypes = array(
             'entity', 'document', 'model'
@@ -76,7 +76,7 @@ class AvocodeFormExtensionsExtension extends Extension
 
     private function loadSelect2Types(ContainerBuilder $container)
     {
-        $serviceId = 'avocode.form.extensions.type.select2';
+        $serviceId = 'admingenerator.form.extensions.type.select2';
 
         $select2types = array(
             'choice', 'language', 'country', 'timezone',
@@ -108,16 +108,16 @@ class AvocodeFormExtensionsExtension extends Extension
                 throw new \LogicException('async_route_name must be defined when async_listener_enabled is true');
             }
 
-            $collectionUploadListenerDefinition = new Definition('%avocode.form.collection_upload_listener.class%');
+            $collectionUploadListenerDefinition = new Definition('%admingenerator.form.collection_upload_listener.class%');
             $collectionUploadListenerDefinition->setArguments(array(
                     new Reference($config['file_storage']),
                     $routeName,
                     new Reference('property_accessor')
             ));
             $collectionUploadListenerDefinition->addTag('kernel.event_subscriber');
-            $container->setDefinition('avocode.form.collection_upload_listener', $collectionUploadListenerDefinition);
+            $container->setDefinition('admingenerator.form.collection_upload_listener', $collectionUploadListenerDefinition);
 
-            $container->getDefinition('avocode.form.extensions.type.collection_upload')->addMethodCall('setFileStorage', array(new Reference($config['file_storage'])));
+            $container->getDefinition('admingenerator.form.extensions.type.collection_upload')->addMethodCall('setFileStorage', array(new Reference($config['file_storage'])));
         }
     }
 }

@@ -5,77 +5,77 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="avocode.form.collection_upload_listener.class">Avocode\FormExtensionsBundle\EventListener\CollectionUploadListener</parameter>
+        <parameter key="admingenerator.form.collection_upload_listener.class">Admingenerator\FormExtensionsBundle\EventListener\CollectionUploadListener</parameter>
     </parameters>
     <services>
         <!-- Form types -->
-        <service id="avocode.form.extensions.type.bootstrap_collection" class="Avocode\FormExtensionsBundle\Form\Type\BootstrapCollectionType" abstract="true" />
+        <service id="admingenerator.form.extensions.type.bootstrap_collection" class="Admingenerator\FormExtensionsBundle\Form\Type\BootstrapCollectionType" abstract="true" />
 
-        <service id="avocode.form.extensions.type.collection_upload" class="Avocode\FormExtensionsBundle\Form\Type\CollectionUploadType">
+        <service id="admingenerator.form.extensions.type.collection_upload" class="Admingenerator\FormExtensionsBundle\Form\Type\CollectionUploadType">
             <tag name="form.type" alias="s2a_collection_upload" />
         </service>
         
-        <service id="avocode.form.extensions.type.datetime_picker" class="Avocode\FormExtensionsBundle\Form\Type\DateTimePickerType">
+        <service id="admingenerator.form.extensions.type.datetime_picker" class="Admingenerator\FormExtensionsBundle\Form\Type\DateTimePickerType">
             <tag name="form.type" alias="s2a_datetime_picker" />
         </service>
         
-        <service id="avocode.form.extensions.type.date_picker" class="Avocode\FormExtensionsBundle\Form\Type\DatePickerType">
+        <service id="admingenerator.form.extensions.type.date_picker" class="Admingenerator\FormExtensionsBundle\Form\Type\DatePickerType">
             <tag name="form.type" alias="s2a_date_picker" />
         </service>
         
-        <service id="avocode.form.extensions.type.time_picker" class="Avocode\FormExtensionsBundle\Form\Type\TimePickerType">
+        <service id="admingenerator.form.extensions.type.time_picker" class="Admingenerator\FormExtensionsBundle\Form\Type\TimePickerType">
             <tag name="form.type" alias="s2a_time_picker" />
         </service>
         
-        <service id="avocode.form.extensions.type.double_list" class="Avocode\FormExtensionsBundle\Form\Type\DoubleListType" abstract="true" />
+        <service id="admingenerator.form.extensions.type.double_list" class="Admingenerator\FormExtensionsBundle\Form\Type\DoubleListType" abstract="true" />
         
-        <service id="avocode.form.extensions.type.knob" class="Avocode\FormExtensionsBundle\Form\Type\KnobType">
+        <service id="admingenerator.form.extensions.type.knob" class="Admingenerator\FormExtensionsBundle\Form\Type\KnobType">
             <tag name="form.type" alias="s2a_knob" />
         </service>
         
-        <service id="avocode.form.extensions.type.mini_colors" class="Avocode\FormExtensionsBundle\Form\Type\MiniColorsType">
+        <service id="admingenerator.form.extensions.type.mini_colors" class="Admingenerator\FormExtensionsBundle\Form\Type\MiniColorsType">
             <tag name="form.type" alias="s2a_mini_colors" />
         </service>
 
-        <service id="avocode.form.extensions.type.select2" class="Avocode\FormExtensionsBundle\Form\Type\Select2Type" abstract="true" />
+        <service id="admingenerator.form.extensions.type.select2" class="Admingenerator\FormExtensionsBundle\Form\Type\Select2Type" abstract="true" />
         
-        <service id="avocode.form.extensions.type.single_upload" class="Avocode\FormExtensionsBundle\Form\Type\SingleUploadType">
+        <service id="admingenerator.form.extensions.type.single_upload" class="Admingenerator\FormExtensionsBundle\Form\Type\SingleUploadType">
             <tag name="form.type" alias="s2a_single_upload" />
         </service>
 
-        <service id="avocode.form.extensions.type.elastic_textarea" class="Avocode\FormExtensionsBundle\Form\Type\ElasticTextareaType">
+        <service id="admingenerator.form.extensions.type.elastic_textarea" class="Admingenerator\FormExtensionsBundle\Form\Type\ElasticTextareaType">
             <tag name="form.type" alias="s2a_elastic_textarea" />
         </service>
 
         <!-- Form extensions -->
-        <service id="form.type_extension.autocomplete" class="Avocode\FormExtensionsBundle\Form\Extension\AutocompleteExtension">
+        <service id="form.type_extension.autocomplete" class="Admingenerator\FormExtensionsBundle\Form\Extension\AutocompleteExtension">
             <tag name="form.type_extension" alias="form" />
         </service>
 
-        <service id="form.type_extension.bootstrap_select" class="Avocode\FormExtensionsBundle\Form\Extension\BootstrapSelectExtension">
+        <service id="form.type_extension.bootstrap_select" class="Admingenerator\FormExtensionsBundle\Form\Extension\BootstrapSelectExtension">
             <tag name="form.type_extension" alias="choice" />
         </service>
 
-        <service id="form.type_extension.help_message" class="Avocode\FormExtensionsBundle\Form\Extension\HelpMessageExtension">
+        <service id="form.type_extension.help_message" class="Admingenerator\FormExtensionsBundle\Form\Extension\HelpMessageExtension">
             <tag name="form.type_extension" alias="form" />
         </service>
         
-        <service id="form.type_extension.novalidate" class="Avocode\FormExtensionsBundle\Form\Extension\NoValidateExtension">
+        <service id="form.type_extension.novalidate" class="Admingenerator\FormExtensionsBundle\Form\Extension\NoValidateExtension">
             <tag name="form.type_extension" alias="form" />
         </service>
         
-        <service id="form.type_extension.single_upload" class="Avocode\FormExtensionsBundle\Form\Extension\SingleUploadExtension">
+        <service id="form.type_extension.single_upload" class="Admingenerator\FormExtensionsBundle\Form\Extension\SingleUploadExtension">
             <tag name="form.type_extension" alias="form" />
         </service>
         
         <!-- Twig extensions -->        
-        <service id="avocode.twig.extension.image_assets" class="Avocode\FormExtensionsBundle\Twig\Extension\ImageAssetsExtension">
+        <service id="admingenerator.twig.extension.image_assets" class="Admingenerator\FormExtensionsBundle\Twig\Extension\ImageAssetsExtension">
             <tag name="twig.extension" />
             <argument type="service" id="service_container" />
         </service>
         
         <!-- Custom services -->
-        <service id="avocode.form.file_storage.local" class="Avocode\FormExtensionsBundle\Storage\LocalFileStorage">
+        <service id="admingenerator.form.file_storage.local" class="Admingenerator\FormExtensionsBundle\Storage\LocalFileStorage">
             <argument type="service" id="session" />
         </service>
     </services>

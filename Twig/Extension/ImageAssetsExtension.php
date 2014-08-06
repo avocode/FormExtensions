@@ -1,6 +1,6 @@
 <?php
 
-namespace Avocode\FormExtensionsBundle\Twig\Extension;
+namespace Admingenerator\FormExtensionsBundle\Twig\Extension;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\Container;
@@ -9,10 +9,10 @@ use Symfony\Component\DependencyInjection\Container;
  * This extension adds common twig function for various upload manager 
  * bundles and common twig filter image manipulation bundles. 
  * 
- * Depending on %avocode.form.upload_manager% setting a diffrent 
+ * Depending on %admingenerator.form.upload_manager% setting a diffrent 
  * upload manager bundle is used.
  * 
- * Depending on %avocode.form.image_manipulator% setting a diffrent 
+ * Depending on %admingenerator.form.image_manipulator% setting a diffrent 
  * image manipulation bundle is used.
  * 
  * @author Piotr Gołębiewski <loostro@gmail.com>
